@@ -1,0 +1,31 @@
+.loading-container {
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Set the container to relative positioning */
+}
+
+.loading-spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+h1 {
+    margin-top: 20px; /* Add some space between the spinner and the heading */
+}
+
+
+.chat-container {
+    display: none; /* Hide chat elements initially */
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhisperNet - A Realtime Flask-SocketIO Chat App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loading.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="loading-container">
+        <div class="loading-spinner"></div>
+        <h1>Loading WhisperNet...</h1>
+    </div>
+
+    <div class="chat-container" style="display: none;"> <!-- Initially hidden -->
+        <nav>
+            <img class="logo" src="{{ url_for('static', filename='images/icon.png') }}" alt="WhisperNet Logo">
+            <h1>WhisperNet</h1>
+        </nav>
+        <div class="container" id="message-container">
+            <!-- Messages will appear here -->
+        </div>
+        <div class="send">
+            <form id="send-container">
+                <input type="text" placeholder="Write message here..." id="messageInp" autocomplete="off">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Flask-SocketIO script served from backend -->
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='js/client.js') }}"></script>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.querySelector('.loading-container').style.display = 'none';
+            document.querySelector('.chat-container').style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>

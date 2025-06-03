@@ -1,0 +1,90 @@
+body{
+    height: 100vh;
+    /* background-color:#85cceb;*/
+    background-image: url('./images/bg.jpg');  
+    background-size: cover;
+    background-position: center;   
+}
+
+.logo{
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+}
+h1{
+    margin-top: 10px;
+    font-size: 30px;
+    font-family:comic sans ms , comic sans,cursive;
+    text-align: center;
+}
+.container{
+    max-width: 955px;
+    border:2px solid rgb(235, 233, 233);
+    border-radius: 13px;
+    margin: auto;
+    height: 60vh;
+    padding: 33px;
+    overflow-y:auto;
+    margin-bottom: 23px;
+    background-color:#131313;
+
+}
+
+.message{
+    width: 24%;
+    padding: 10px;
+    /*margin: 4px 5px;
+    /*border: 2px solid black;*/
+    /*border-radius: 5px;*/
+}
+
+.left{
+    float: left;
+    clear:both;
+    color:rgb(31, 168, 7);
+}
+
+.right{
+    float: right;
+    clear:both;
+    color:rgb(239, 170, 7);
+}
+
+#send-container{
+    display:block;
+    margin: auto;
+    text-align: center;
+    max-width: 1085px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#messageInp{
+
+    width: 80%;
+    border: 2px solid rgb(10, 10, 10);
+    border-radius: 6px;
+    height: 34px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+#messageInp::placeholder{
+    font-size: small;
+    font-family:'Times New Roman', Times, serif ;
+}
+
+#button{
+    background-color:mediumspringgreen;
+    text-decoration:double;
+    margin: 0 4px;
+    width: 10px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: 34px;
+}
